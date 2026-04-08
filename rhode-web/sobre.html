@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre rhode — beauty by hailey bieber</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+
+
+        /* ══════════════════════════════
+           SECCIONES — estructura base
+        ══════════════════════════════ */
+        .seccion {
+            padding: 6rem 3rem;
+        }
+
+
+        .seccion-cream  { background-color: var(--cream); }
+        .seccion-blush  { background-color: var(--blush); }
+        .seccion-white  { background-color: var(--white); }
+
+
+        .seccion-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+
+        /* ══════════════════════════════
+           1. FUNDADORA
+        ══════════════════════════════ */
+        .fundadora-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+
+        .fundadora-img {
+            border-radius: 4px;
+            overflow: hidden;
+            aspect-ratio: 4/5;
+        }
+
+
+        .fundadora-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+
+        .fundadora-texto .eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--bark);
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+
+        .fundadora-texto h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+            font-weight: 300;
+            color: var(--deep);
+            line-height: 1.15;
+            margin-bottom: 1.8rem;
+        }
+
+
+        .fundadora-texto p {
+            font-size: 0.9rem;
+            color: var(--bark);
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
+        }
+
+
+        /* ══════════════════════════════
+           2. INGREDIENTES
+        ══════════════════════════════ */
+        .ing-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: end;
+            margin-bottom: 3rem;
+        }
+
+
+        .ing-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 300;
+            color: var(--deep);
+            line-height: 1.15;
+        }
+
+
+        .ing-header p {
+            font-size: 0.88rem;
+            color: var(--bark);
+            line-height: 1.8;
+        }
+
+
+        .ing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+
+        .ing-card {
+            background-color: var(--cream);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+
+        .ing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 35px rgba(61,43,31,0.09);
+        }
+
+
+        .ing-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(20%);
+            transition: filter 0.4s;
+        }
+
+
+        .ing-card:hover img { filter: grayscale(0%); }
+
+
+        .ing-card-body {
+            padding: 1.1rem 1.3rem 1.5rem;
+        }
+
+
+        .ing-card-body h4 {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--deep);
+            margin-bottom: 0.4rem;
+        }
+
+
+        .ing-card-body p {
+            font-size: 0.81rem;
+            color: var(--bark);
+            line-height: 1.6;
+        }
+
+
+        /* ══════════════════════════════
+           3. EQUIPO CIENTÍFICO
+        ══════════════════════════════ */
+        .team-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+
+        .team-header .eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--bark);
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+
+        .team-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 300;
+            color: var(--deep);
+            margin-bottom: 1rem;
+        }
+
+
+        .team-header p {
+            font-size: 0.88rem;
+            color: var(--bark);
+            line-height: 1.8;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+
+        .team-card {
+            background-color: var(--cream);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(61,43,31,0.1);
+        }
+
+
+        .team-card img {
+            width: 100%;
+            aspect-ratio: 3/3.5;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+        }
+
+
+        .team-card-body {
+            padding: 1.4rem 1.6rem 1.8rem;
+            text-align: center;
+        }
+
+
+        .team-card-body h3 {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--deep);
+            margin-bottom: 0.3rem;
+        }
+
+
+        .team-role {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            margin-bottom: 0.9rem;
+            font-weight: 300;
+        }
+
+
+        .team-card-body p {
+            font-size: 0.82rem;
+            color: var(--bark);
+            line-height: 1.7;
+        }
+
+
+        /* ══════════════════════════════
+           RESPONSIVE
+        ══════════════════════════════ */
+        @media (max-width: 768px) {
+            .seccion { padding: 4rem 1.5rem; }
+            .fundadora-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .ing-header { grid-template-columns: 1fr; gap: 1rem; }
+            .ing-grid { grid-template-columns: repeat(2, 1fr); }
+            .team-grid { grid-template-columns: 1fr; max-width: 400px; }
+            .sobre-nav a { padding: 1rem 1.5rem; }
+        }
+
+
+        @media (max-width: 480px) {
+            .ing-grid { grid-template-columns: 1fr; }
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="banner-strip">
+    envío gratis en pedidos mayores de $35 &nbsp;·&nbsp; nuevo: glazing milk body
+</div>
+
+
+<header>
+    <div class="navbar">
+        <div class="logo">rhode</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" style="min-height:45vh; padding:4rem 2rem;">
+    <span class="hero-eyebrow">nuestra historia</span>
+    <h1>Sobre<br><em>rhode</em></h1>
+    <p>Skincare creado con propósito, ciencia y amor por la piel natural.</p>
+</section>
+
+
+
+
+
+
+<!-- ═══════════════════════════════════════
+     SECCIÓN 1 — FUNDADORA
+════════════════════════════════════════ -->
+<section class="seccion seccion-cream" id="fundadora">
+    <div class="seccion-inner">
+        <div class="fundadora-grid">
+            <div class="fundadora-img">
+                <img src="img/hailey.png" alt="Hailey Bieber — fundadora de rhode">
+            </div>
+            <div class="fundadora-texto">
+                <span class="eyebrow">fundadora</span>
+                <h2>Hailey Bieber<br>y la visión<br>de rhode</h2>
+                <p>rhode nació en 2022 de la mente de Hailey Bieber, modelo e ícono de su generación. Frustrada por rutinas de belleza complicadas y productos con ingredientes innecesarios, decidió crear su propia línea.</p>
+                <p>La filosofía es simple: menos pasos, mejores ingredientes, resultados reales. rhode está formulada para todo tipo de piel y pensada para que cualquier persona pueda lucir su mejor versión sin esfuerzo.</p>
+                <p>Cada producto nace de la experiencia personal de Hailey — de lo que realmente funciona en su piel y en la de quienes la rodean.</p>
+                <br>
+                <a href="productos.html" class="btn-outline">Ver la colección</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- ═══════════════════════════════════════
+     SECCIÓN 2 — INGREDIENTES
+════════════════════════════════════════ -->
+<section class="seccion seccion-white" id="ingredientes">
+    <div class="seccion-inner">
+        <div class="ing-header">
+            <h2>ingredientes con<br>respaldo científico</h2>
+            <p>Cada producto de rhode está formulado con ingredientes de alto rendimiento, seleccionados con propósito y en niveles eficaces para resultados reales y visibles.</p>
+        </div>
+
+
+        <div class="ing-grid">
+            <div class="ing-card">
+                <img src="img/Ing_Peptides_2000x2000_b665f6c3-dc64-4354-9231-f83caa54cb12_2000x.webp" alt="Péptidos">
+                <div class="ing-card-body">
+                    <h4>Péptidos</h4>
+                    <p>Aminoácidos activos que rellenan visiblemente la piel y reducen la apariencia de líneas finas.</p>
+                </div>
+            </div>
+            <div class="ing-card">
+                <img src="img/Ing_SheaButter_v3_2000x2000_1_2000x.webp" alt="Manteca de Karité">
+                <div class="ing-card-body">
+                    <h4>Manteca de karité</h4>
+                    <p>Hidrata profundamente con 5 ácidos grasos esenciales, vitaminas E, D, A y alantoína.</p>
+                </div>
+            </div>
+            <div class="ing-card">
+                <img src="img/Ing_Niacinamide_2000x2000_4967fd9c-bc95-4aba-acc6-d0eab27b268a_2000x.webp" alt="Niacinamida">
+                <div class="ing-card-body">
+                    <h4>Niacinamida</h4>
+                    <p>Nutre, minimiza los poros y mejora la textura general de la piel de forma visible.</p>
+                </div>
+            </div>
+            <div class="ing-card">
+                <img src="img/Ing_Hyaluronic_2000x2000_40745670-93e7-4db2-a665-8a5be176e7d1_2000x.webp" alt="Ácido Hialurónico">
+                <div class="ing-card-body">
+                    <h4>Ácido hialurónico</h4>
+                    <p>Retiene la hidratación, sella la humedad y mantiene la piel tersa y luminosa todo el día.</p>
+                </div>
+            </div>
+            <div class="ing-card">
+                <img src="img/Ing_Marula_2000x2000_60b205d0-9144-401b-a41b-7fee07abd7c4_2000x.webp" alt="Aceite de Marula">
+                <div class="ing-card-body">
+                    <h4>Aceite de marula</h4>
+                    <p>Ligero pero rico en ácidos grasos que suavizan y fortalecen la barrera cutánea.</p>
+                </div>
+            </div>
+            <div class="ing-card">
+                <img src="img/Ing_Squalene_2000x2000_0c9b3737-9763-4389-a1db-442baad40e19_2000x.webp" alt="Escualano">
+                <div class="ing-card-body">
+                    <h4>Escualano</h4>
+                    <p>Emoliente poderoso que hidrata profundamente y suaviza la piel sin dejar residuo graso.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- ═══════════════════════════════════════
+     SECCIÓN 3 — EQUIPO CIENTÍFICO
+════════════════════════════════════════ -->
+<section class="seccion seccion-blush" id="equipo">
+    <div class="seccion-inner">
+        <div class="team-header">
+            <span class="eyebrow">expertos</span>
+            <h2>conoce al equipo<br>científico</h2>
+            <p>Nuestro panel de expertos en química cosmética y dermatología guía la innovación de cada producto, desde la fórmula inicial hasta el resultado final en tu piel.</p>
+        </div>
+
+
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="img/ron_2000x.webp" alt="Dr. Ron Robinson">
+                <div class="team-card-body">
+                    <h3>Dr. Ron Robinson</h3>
+                    <span class="team-role">químico cosmético</span>
+                    <p>Un innovador en su campo, el Dr. Robinson es un químico galardonado con más de 20 años de experiencia desarrollando productos para las principales marcas de belleza. Es el fundador de BeautyStat, una marca pionera en la industria del skincare.</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="img/dhaval_054933d8-4aa9-4b0f-9dab-8bd84b148cd1_2000x.webp" alt="Dr. Dhaval Bhanusali">
+                <div class="team-card-body">
+                    <h3>Dr. Dhaval Bhanusali</h3>
+                    <span class="team-role">dermatólogo</span>
+                    <p>El Dr. Bhanusali es un dermatólogo líder en la industria del skincare. Atiende pacientes en su consulta en Hudson Yards, Nueva York, y colabora regularmente con empresas de salud para crear productos reconocidos, accesibles y efectivos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <span class="footer-logo">rhode</span>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="sobre.html">Sobre</a>
+    </nav>
+    <p>&copy; 2026 rhode skin — inspired website</p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+/* FUENTE */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Jost&display=swap');
+
+/* COLORES */
+:root {
+    --cream: #F7F0E8;
+    --blush: #E8D5C4;
+    --petal: #D4B5A0;
+    --bark: #8B6F5E;
+    --deep: #3D2B1F;
+    --white: #FDFAF7;
+    --accent: #C49A80;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: var(--cream);
+    color: var(--deep);
+}
+
+/* BANNER */
+.banner-strip {
+    background-color: var(--deep);
+    color: var(--blush);
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
+
+/* HEADER */
+header {
+    background-color: var(--white);
+    padding: 15px 30px;
+    border-bottom: 1px solid var(--blush);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--bark);
+    font-size: 12px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    color: var(--bark);
+}
+
+/* BOTONES */
+.btn {
+    background-color: var(--deep);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.btn-outline {
+    border: 1px solid var(--deep);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--deep);
+}
+
+/* TITULOS */
+.section-title {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.section-title h2 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* TARJETAS */
+.inventario {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.carta {
+    background-color: var(--white);
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid var(--blush);
+}
+
+.carta img {
+    width: 100%;
+}
+
+.carta-body {
+    padding: 15px;
+}
+
+.carta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 10px 0;
+}
+
+.carta p {
+    font-size: 14px;
+    color: var(--bark);
+}
+
+/* FRASE */
+.quote-section {
+    background-color: var(--blush);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.quote-section blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* ABOUT */
+.about-grid {
+    display: flex;
+    padding: 40px;
+    gap: 20px;
+}
+
+.about-img img {
+    width: 100%;
+}
+
+.about-text {
+    width: 50%;
+}
+
+/* VALORES */
+.valores-grid {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.valor-card {
+    width: 30%;
+    padding: 20px;
+    background-color: var(--white);
+    margin: 10px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--deep);
+    color: var(--blush);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer nav a {
+    color: var(--petal);
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 12px;
+}
